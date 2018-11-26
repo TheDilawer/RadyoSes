@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.lamabilisim.radyoses"
+        version   = "1.0.1">
+
+    <name>Radyo Ses</name>
+
+
+
+    <description>
+        RadyoSes uygulamasıdır.
+    </description>
+
+    <author href="http://www.lamabilisim.com" email="ozgurcaglarcosar@gmail.com">
+        Lamabilisim
+    </author>
+
+     <!--
+        If you do not want any permissions to be added to your app, add the
+        following tag to your config.xml; you will still have the INTERNET
+        permission on your app, which PhoneGap requires.
+    -->
+    <preference name="permissions"                value="none"/>
+
+    <!-- Customize your app and platform with the preference element. -->
+    <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
+    <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+    <preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+    <preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+    <preference name="StatusBarOverlaysWebView"  value="true" />
+	<preference name="detect-data-types"          value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+    <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+    <preference name="show-splash-screen-spinner" value="false" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+    <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+    <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+    <preference name="android-minSdkVersion"      value="7" />               <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+	<preference name="android-targetSdkVersion" value="26" />
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="android-windowSoftInputMode" value="adjustResize" />
+
+
+
+
+   <!--
+        Define a specific version of PhoneGap to build into your app.
+        <preference name="phonegap-version"       value="3.5.0" />
+    -->
+    <preference name="phonegap-version" value="cli-6.5.0" />
+    <!-- Plugins -->
+    <plugin name="cordova-plugin-whitelist"      source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <splash src="icon-568h@2x.png"/>
+    <preference name="SplashScreen" value="icon-568h@2x.png" />
+    <preference name="SplashScreen"               value="splash" />
+    <preference name="SplashScreenDelay"          value="5000" />
+    <preference name="SplashMaintainAspectRatio"  value="true" />
+    <preference name="FadeSplashScreen"           value="false"/>
+
+
+
+  <!--<plugin name="cordova-plugin-whitelist" spec="1.3.2" />
+   <plugin name="org.apache.cordova.splashscreen" spec="4.0.2" />
+<plugin name="org.apache.cordova.statusbar" /> -->
+
+
+    <!-- Third party plugins -->
+    <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
+    <!--
+        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+		
+    -->
+	<plugin name="cordova-plugin-insomnia" />
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon src="icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+
+    <icon src="icon-80.png"     gap:platform="blackberry" />
+    <icon src="icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
+	 <!-- IOS ICONS -->
+	<icon src="icon.png" gap:platform="ios" />
+	<icon src="icon@2x.png"         gap:platform="ios"        width="114" height="114" />
+
+	<icon src="icon-small.png" width="29" height="29" gap:platform="ios" />
+	<icon src="icon-small@2x.png" width="58" height="58" gap:platform="ios" />
+	<icon src="icon-small@3x.png" width="87" height="87" gap:platform="ios" />
+	<icon src="icon-small-40.png" width="40" height="40" gap:platform="ios" />
+	<icon src="icon-small-40@2x.png" width="80" height="80" gap:platform="ios" />
+	<icon src="icon-small-40@3x.png" width="120" height="120" gap:platform="ios" />
+	<icon src="icon-small-50.png" width="50" height="50" gap:platform="ios" />
+	<icon src="icon-small-50@2x.png" width="100" height="100" gap:platform="ios" />
+
+	<icon src="icon-57.png" 	width="57" height="57" gap:platform="ios" />
+   	<icon src="icon-57@2x.png"  width="114" height="114" gap:platform="ios"/>
+
+	<icon src="icon-60.png" 	width="60" height="60" gap:platform="ios" />
+	<icon src="Icon-60@2x.png" 	width="120" height="120" gap:platform="ios" />
+	<icon src="Icon-60@3x.png" 	width="180" height="180" gap:platform="ios" />
+
+ 	<icon src="icon-72.png" 	width="72" height="72" gap:platform="ios" />
+ 	<icon src="icon-72@2x.png" 	width="144" height="144" gap:platform="ios" />
+
+
+	<icon src="icon-76.png" 	width="76" height="76" gap:platform="ios" />
+    <icon src="icon-76@2x.png"  width="152" height="152" gap:platform="ios"/>
+	<icon src="icon-76x76@2x.png"  width="152" height="152" gap:platform="ios"/>
+
+	<icon src="icon-83.5@2x.png"  width="167" height="167" gap:platform="ios"/>
+
+	<icon src="icon-120.png" 	width="120" height="120" gap:platform="ios" />
+	<icon src="icon-120@2x.png" width="120" height="120" gap:platform="ios" />
+
+	<icon src="icon-152.png" width="76" height="76" gap:platform="ios" />
+	<icon src="icon-152@2x.png" width="152" height="152" gap:platform="ios" />
+
+	<icon src="icon-167.png" width="167" height="167" gap:platform="ios" />
+	<icon src="icon-173.png" width="173" height="173" gap:platform="ios" />
+
+	<icon src="Icon-App-60x60@2x.png" width="120" height="120" gap:platform="ios" />
+	<icon src="Icon-App-76x76@2x.png" width="152" height="152" gap:platform="ios" />
+
+
+	<!-- IOS ICONS -->
+
+
+    <icon src="icon-64.png"          gap:platform="webos" />
+    <icon src="ricon-48.png"  gap:platform="winphone" />
+    <icon src="icon-173.png" gap:platform="winphone"   gap:role="background" />
+
+
+
+    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
+    <string>102</string>
+    </gap:config-file>
+
+
+ <allow-navigation href="*" />
+<access origin="*" launch-external="yes" />
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" />
+
+
+
+</widget>
